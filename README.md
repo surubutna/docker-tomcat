@@ -26,6 +26,8 @@ There's two ways to launch the application:
     1. Manually build and run
     2. Via script
 
+    Note: Due to building OpenSSL 3.3.0 from source, first build may take a few minutes to complete.
+
 
 
 ## 1. Manually build and run
