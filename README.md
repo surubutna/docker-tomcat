@@ -43,6 +43,7 @@ Build with default Dockerfile
 ```bash
   docker run -d -p 4041:4041 --name tomcat-ssl3-container tomcat-ssl3
 ```
+
 ## 2. Via script (tomcat_run.sh)
 2.1 - Ensure script has execute permission
 ```bash
@@ -52,10 +53,19 @@ Build with default Dockerfile
 ```bash
   ./tomcat_run.sh
 ```
+
 ## Logs
 
 After a sucessful run, check container logs 
 
 ```bash
   docker logs tomcat-ssl3-container
+```
+
+## Access app
+
+Access app at: 
+
+```bash
+  [https:<ip-address>:4041/sample](https://localhost:4041/sample/)
 ```
