@@ -67,5 +67,5 @@ After a sucessful run, check container logs
 Access app at: 
 
 ```bash
-  [https:<ip-address>:4041/sample](https://localhost:4041/sample/)
+  https://localhost:4041/sample
 ```
