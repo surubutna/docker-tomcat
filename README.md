@@ -13,6 +13,7 @@ Sample web app deployed in a Tomcat container on Docker
 ## Project structure
     docker-tomcat/
     ├── Dockerfile
+    ├── README.md
     ├── sample.war
     ├── server.xml
     ├── ssl
