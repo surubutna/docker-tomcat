@@ -33,7 +33,7 @@ RUN wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.100/bin/apache-tomcat-8.5
 RUN wget https://dlcdn.apache.org/tomcat/tomcat-connectors/native/1.2.39/source/tomcat-native-1.2.39-src.tar.gz -O /tmp/tomcat-native.tar.gz && \
     tar xzf /tmp/tomcat-native.tar.gz -C /tmp && \
     cd /tmp/tomcat-native-1.2.39-src/native/ && \
-    ./configure --with-apr=/usr/bin/apr-1-config --with-java-home=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.412.b08-1.el7_9.x86_64 --with-ssl=$OPENSSL_HOME --prefix=$CATALINA_HOME && \
+    ./configure --with-apr=/usr/bin/apr-1-config --with-java-home=$(dirname $(dirname $(readlink -f $(type java))) | tail -1 | sed 's/\/jre//') --with-ssl=$OPENSSL_HOME --prefix=$CATALINA_HOME && \
     make && make install && \ 
     rm -rf /tmp/tomcat-native-1.2.39-src /tmp/tomcat-native.tar.gz
 
@@ -53,4 +53,3 @@ EXPOSE 4041
 
 #Run Tomcat
 CMD ["catalina.sh", "run"]
-
