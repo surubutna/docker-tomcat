@@ -1,5 +1,6 @@
 #!/bin/bash
 
+WHITE='\033[37;1m' #white
 RED='\033[31;1m'   #red
 GREEN='\033[32;1m'   #green
 BLUE='\033[34;1m'   #blue
@@ -35,4 +36,4 @@ if [ $? -ne 0 ]; then
 fi
 
 #A-Ok
-echo -e "\n${GREEN}$CONTAINER_NAME is running successfully.${NC} \n\nAccess app at https://localhost:4041/sample \n"
+echo -e "\n${GREEN}$CONTAINER_NAME is running successfully.${NC} \n\nAccess app at ${WHITE}https://localhost:4041/sample${NC} \n"
