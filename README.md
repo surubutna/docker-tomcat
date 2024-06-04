@@ -38,10 +38,6 @@ Build with default Dockerfile
 ```bash
   docker build -t tomcat-ssl3 .
 ```
-*(optional)* Build with custom Dockerfile (eg. Dockerfile_ssl3)
-```bash
-  docker build -t tomcat-ssl3 -f Dockerfile_ssl3 .
-```
 1.2 - Run
 ```bash
   docker run -d -p 4041:4041 --name tomcat-ssl3-container tomcat-ssl3
